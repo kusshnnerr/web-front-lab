@@ -1,0 +1,26 @@
+body {
+        background-color:cornsilk;
+        color:black; 
+        font-family: Arial; 
+        margin: 0px; 
+}
+header {
+        background-color: burlywood;
+        padding: 15px;
+        font-size: 17pt;
+        font-family: 'Times New Roman'
+}
+main {
+        background-color:bisque;
+        color:black; 
+        font-family:initial; 
+        margin: 5px;
+        font-size: 20px;
+}
+footer {
+        background-color: burlywood ;
+        padding: 15px;
+        font-size: 17pt;
+        font-family: 'Times New Roman';
+        text-align: right;
+}
