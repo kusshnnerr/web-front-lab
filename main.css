@@ -30,10 +30,10 @@ a {
         transition: 2s 1s;
 }
 a:link {
-        color:rgb(66, 39, 59)
+        color:rgb(66, 39, 59);
 }
 a:visited {
-        color:rgba(127, 122, 129, 0.896)
+        color:rgba(127, 122, 129, 0.896);
 }
 a:hover {
         color:red;
