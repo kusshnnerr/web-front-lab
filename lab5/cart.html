@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кушнер Екатерина Константиновна. Лабораторная 5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script>
+        function calculateTotal() {
+            const applesPrice = 50; // Цена за одно яблоко в рублях
+            const orangesPrice = 40; // Цена за один апельсин в рублях
+            const bananasPrice = 30; // Цена за один банан в рублях
+            const kiwisPrice = 60; // Цена за одно киви в рублях
+            const watermelonsPrice = 70; // Цена за один арбуз в рублях
+
+            const apples = parseInt(document.getElementById('apples').value) || 0;
+            const oranges = parseInt(document.getElementById('oranges').value) || 0;
+            const bananas = parseInt(document.getElementById('bananas').value) || 0;
+            const kiwis = parseInt(document.getElementById('kiwis').value) || 0;
+            const watermelons = parseInt(document.getElementById('watermelons').value) || 0;
+
+            const total = (apples * applesPrice) + (oranges * orangesPrice) + (bananas * bananasPrice) + (kiwis * kiwisPrice) + (watermelons * watermelonsPrice);
+
+            document.getElementById('total').textContent = `Общая сумма к оплате: ${total} рублей`;
+        }
+
+        function clearCart() {
+            document.getElementById('cartForm').reset();
+            document.getElementById('total').textContent = '';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+
+    <main>
+        <h1>Корзина товаров</h1>
+        <form id="cartForm">
+            <div>
+                <label for="apples">Яблоки (50р/шт):</label>
+                <input type="number" id="apples" name="apples" min="0" placeholder="Количество яблок">
+            </div>
+            <div>
+                <label for="oranges">Апельсины (40р/шт):</label>
+                <input type="number" id="oranges" name="oranges" min="0" placeholder="Количество апельсинов">
+            </div>
+            <div>
+                <label for="bananas">Бананы (30р/шт):</label>
+                <input type="number" id="bananas" name="bananas" min="0" placeholder="Количество бананов">
+            </div>
+            <div>
+                <label for="kiwis">Киви (60р/шт):</label>
+                <input type="number" id="kiwis" name="kiwis" min="0" placeholder="Количество киви">
+            </div>
+            <div>
+                <label for="watermelons">Арбузы (70р/шт):</label>
+                <input type="number" id="watermelons" name="watermelons" min="0" placeholder="Количество арбузов">
+            </div>
+            <button type="button" onclick="calculateTotal()">Рассчитать</button>
+            <button type="button" onclick="clearCart()">Очистить</button>
+        </form>
+        <div id="total"></div>
+    </main>
+
+    <footer>
+        &copy;Екатерина Кушнер, ФБИ-21, 2 курс, 2024
+    </footer>
+</body>
+</html>
