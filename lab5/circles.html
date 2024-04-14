@@ -20,6 +20,7 @@
             line-height: 100px;
             font-size: 24px;
             font-weight: bold;
+            transition: opacity 1s ease; /* добавленная анимация */
         }
     </style>
 </head>
@@ -33,23 +34,8 @@
         <button onclick="resetCircles()">Сбросить</button>
 
         <script>
-            function resetCircles() {
-                var circles = document.querySelectorAll('.circle');
-                circles.forEach(function(circle) {
-                    circle.style.opacity = 1;
-                    circle.style.width = '100px';
-                    circle.style.height = '100px';
-                });
-            }
-        
-            function hideCircle(circle) {
-                circle.style.transition = 'opacity 1s, width 1s, height 1s';
-                circle.style.opacity = 0;
-                circle.style.width = 0;
-                circle.style.height = 0;
-            }
-        
             var container = document.getElementById('container');
+            var hiddenCircles = [];
         
             for (var i = 1; i <= 10; i++) {
                 var circle = document.createElement('div');
@@ -71,6 +57,22 @@
                     color += letters[Math.floor(Math.random() * 16)];
                 }
                 return color;
+            }
+        
+            function hideCircle(circle) {
+                circle.style.opacity = '0'; // Изменяем прозрачность на 0
+                setTimeout(function() {
+                    circle.style.display = 'none'; // Скрываем круг после окончания анимации
+                }, 1000); // Время анимации в миллисекундах (1000 мс = 1 с)
+                hiddenCircles.push(circle);
+            }
+        
+            function resetCircles() {
+                hiddenCircles.forEach(function(circle) {
+                    circle.style.opacity = '1'; // Возвращаем прозрачность обратно к 1
+                    circle.style.display = 'inline-block';
+                });
+                hiddenCircles = [];
             }
         </script>
     </main>
