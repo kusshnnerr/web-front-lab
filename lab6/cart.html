@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кушнер Екатерина Константиновна. Лабораторная 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 30%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #5d5c5c;
+            border-right: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .tovar-image {
+            transition: transform 0.3s ease; /* Добавляем плавный переход */
+        }
+        .tovar-image:hover {
+            transform: scale(1.5); /* Увеличиваем масштаб изображения при наведении */
+        }
+        .container {
+            position: relative;
+            min-height: calc(100vh - 50px);
+            padding-bottom: 50px; /* Отступ снизу */
+        }
+
+        .container > button,
+        .container > p {
+            display: block;
+            margin: 0 auto;
+        }
+
+    </style>
+    <script>
+        function calculateTotal() {
+            const balance = parseFloat(document.getElementById('balance').value);
+            const quantityInputs = document.getElementsByClassName('quantity');
+            let total = 0;
+            let allEmpty = true;
+            let hasNegative = false;
+
+            for (let i = 0; i < quantityInputs.length; i++) {
+                const quantity = parseFloat(quantityInputs[i].value);
+                const price = parseFloat(quantityInputs[i].parentNode.previousElementSibling.textContent);
+
+                if (quantity < 0) {
+                    hasNegative = true;
+                    break;
+                }
+
+                if (!isNaN(quantity) && quantity > 0) {
+                    allEmpty = false;
+                    total += quantity * price;
+                }
+            }
+
+            const message = document.getElementById('message');
+
+            if (hasNegative) {
+                message.textContent = 'Количество товара не может быть отрицательным.';
+            } else if (allEmpty) {
+                message.textContent = 'Необходимо выбрать хотя бы один товар.';
+            } else if (total > balance) {
+                message.textContent = `Общая сумма (${total}) превышает ваш баланс (${balance}). Оформление заказа невозможно.`;
+            } else {
+                message.textContent = `Заказ успешно оформлен. Общая сумма: ${total}`;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+
+    <main>
+        <label for="balance">Мой баланс:</label>
+        <input type="number" id="balance" value="1000">
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../t1.jpg" width="150" height="200" class="tovar-image"></td>
+                        <td>Fairy Horses</td>
+                        <td>109</td>
+                        <td><input type="number" class="quantity" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../t2.jpg" width="150" height="200" class="tovar-image"></td>
+                        <td>Гном</td>
+                        <td>200</td>
+                        <td><input type="number" class="quantity" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../t3.jpg" width="150" height="200" class="tovar-image"></td>
+                        <td>Бык</td>
+                        <td>929</td>
+                        <td><input type="number" class="quantity" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../t4.jpg" width="150" height="200" class="tovar-image"></td>
+                        <td>Попугай</td>
+                        <td>559</td>
+                        <td><input type="number" class="quantity" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../t5.jpg" width="150" height="200" class="tovar-image"></td>
+                        <td>Бегемот</td>
+                        <td>768</td>
+                        <td><input type="number" class="quantity" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../t6.jpg" width="150" height="200" class="tovar-image"></td>
+                        <td>Гусь</td>
+                        <td>800</td>
+                        <td><input type="number" class="quantity" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../t7.jpg" width="150" height="200" class="tovar-image"></td>
+                        <td>Крокодил</td>
+                        <td>643</td>
+                        <td><input type="number" class="quantity" value="0"></td>
+                    </tr>
+                </tbody>
+            </table><br>
+    
+    
+            <button onclick="calculateTotal()">ОК</button>
+            <p id="message"></p>
+        </div>
+    </main>
+
+    <footer>
+        &copy;Екатерина Кушнер, ФБИ-21, 2 курс, 2024
+    </footer>
+    
+</body>
+</html>
