@@ -73,7 +73,22 @@
                     main.appendChild(newBlock);
                 }
             }
-    </script>  
+            function add1_10() {
+                let main = document.querySelector('main');
+                for(let i=0; i<10; i++) {
+                    let newBlock = document.createElement('div');
+                    newBlock.style.backgroundColor = 'rgb(220, 20, 60)';
+                    newBlock.style.height = '40px';
+                    newBlock.style.marginTop = '10px';
+                    newBlock.style.border = '2px solid';
+                    newBlock.style.opacity = (i*10)+'%';
+
+                    newBlock.innerText = (i+1);
+
+                    main.appendChild(newBlock);
+                }
+            }
+    </script>
 </head>
 <body>
 
@@ -87,6 +102,7 @@
        <input type="number" id="blocksCount" placeholder="Введите число блоков">
        <button onclick="add20_50()">20 => 50</button>
        <button onclick="add10_80()">10=>-80</button>
+       <button onclick="add1_10()">Полупрозрачные блоки</button>
     </main>
 
     <footer>
