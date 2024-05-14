@@ -8,21 +8,178 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="icon" href="../favicon-16x16.png">
     <link rel="icon" href="../favicon-32x32.png">
-    <style>
+    <script>
+    function circleLA() {
+        let cA = document.getElementById('circlA');
+        cA.style.opacity = "0";
+        cA.style.height = "0px";
+        cA.style.width = "0px";
+        cA.style.transition = "1s";
+    }
+    function circleLB() {
+        let cB = document.getElementById('circlB');
+        cB.style.opacity = "0";
+        cB.style.height = "0px";
+        cB.style.width = "0px";
+        cB.style.transition = "1s";
+    }
+    function circleLC() {
+        let cC = document.getElementById('circlC');
+        cC.style.opacity = "0";
+        cC.style.height = "0px";
+        cC.style.width = "0px";
+        cC.style.transition = "1s";
+    }
+    function circleLD() {
+        let cD = document.getElementById('circlD');
+        cD.style.opacity = "0";
+        cD.style.height = "0px";
+        cD.style.width = "0px";
+        cD.style.transition = "1s";
+    }
+    function circleLE() {
+        let cE = document.getElementById('circlE');
+        cE.style.opacity = "0";
+        cE.style.height = "0px";
+        cE.style.width = "0px";
+        cE.style.transition = "1s";
+    }
+    function circleLF() {
+        let cF = document.getElementById('circlF');
+        cF.style.opacity = "0";
+        cF.style.height = "0px";
+        cF.style.width = "0px";
+        cF.style.transition = "1s";
+     }
+    function circleLG() {
+        let cG = document.getElementById('circlG');
+        cG.style.opacity = "0";
+        cG.style.height = "0px";
+        cG.style.width = "0px";
+        cG.style.transition = "1s";
+    }
+    function circleLH() {
+        let cH = document.getElementById('circlH');
+        cH.style.opacity = "0";
+        cH.style.height = "0px";
+        cH.style.width = "0px";
+        cH.style.transition = "1s";
+    }
+    function circleLI() {
+        let cI = document.getElementById('circlI');
+        cI.style.opacity = "0";
+        cI.style.height = "0px";
+        cI.style.width = "0px";
+        cI.style.transition = "1s"
+    }
+    function circleLJ() {
+        let cJ = document.getElementById('circlJ');
+        cJ.style.opacity = "0";
+        cJ.style.height = "0px";
+        cJ.style.width = "0px";
+        cJ.style.transition = "1s";
+     }
+    function circleC() {
+        let circles = ['circlA', 'circlB', 'circlC', 'circlD', 'circlE',
+        'circlF', 'circlG', 'circlH', 'circlI', 'circlJ'];
+        circles.forEach(function(circlId) {
+            let circle = document.getElementById(circlId);
+            circle.style.opacity = "1";
+            circle.style.height = "60px";
+            circle.style.width = "60px";  
+            circle.style.transition = "1s";
+        });
+    }
+        </script>
+        <style>
         .circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            display: inline-block;
-            position: absolute;
-            cursor: pointer;
-            text-align: center;
-            line-height: 100px;
-            font-size: 24px;
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
             font-weight: bold;
-            transition: opacity 1s ease; /* добавленная анимация */
+            font-size: 15px;
+            position: absolute;
+            box-shadow: 7px 7px 25px rgba(11, 11, 11, 0.87);
+            cursor: pointer;
         }
-    </style>
+    
+        .A {
+            background-color: rgb(123, 151, 228);
+            border: 3px  solid rgb(2, 49, 158);
+            left: 520px;
+            top: 180px;
+        }
+        .B {
+            background-color: rgb(173, 116, 217);
+            border: 3px solid rgb(75, 3, 219);
+            left: 1170px;
+            top: 450px;
+        }
+        .C {
+            background-color: rgb(204, 125, 194);
+            border: 3px solid rgb(175, 8, 164);
+            left: 520px;
+            top: 500px;
+        }
+        .D {
+            background-color: rgb(143, 206, 129);
+            border: 3px solid rgb(5, 206, 36);
+            left: 970px;
+            top: 450px;
+        }
+        .E {
+            background-color: rgb(226, 221, 129);
+            border: 3px solid rgb(133, 133, 6);
+            left: 680px;
+            top: 400px;
+        }
+        .F {
+            background-color: rgb(216, 133, 158);
+            border: 3px solid rgb(184, 7, 22);
+            left: 920px;
+            top: 225px;
+        }
+        .G {
+            background-color: rgb(224, 169, 127);
+            border: 3px solid rgb(186, 73, 7);
+            left: 1200px;
+            top: 200px;
+        }
+        .H {
+            background-color: rgb(108, 207, 186);
+            border: 3px solid rgb(18, 169, 142);
+            left: 250px;
+            top: 300px;
+        }
+        .I {
+            background-color: rgb(168, 218, 132);
+            border: 3px solid rgb(50, 166, 11);
+            left: 300px;
+            top: 550px;
+        }
+        .J {
+            background-color: rgb(131, 115, 190);
+            border: 3px solid rgb(59, 5, 117);
+            left: 750px;
+            top: 100px;
+        }
+        input {
+            height: 50px;
+            width: 250px;
+            font-size: 20px;
+            background-color: rgb(189, 109, 189);
+            border: 3px solid rgb(24, 96, 205);
+            color: white;
+            cursor: pointer;
+            position: absolute;
+            left: 100px;
+            top: 600px;
+        }
+        </style>
 </head>
 <body>
     <header>
@@ -30,51 +187,47 @@
     </header>
 
     <main>
-        <div id="container"></div>
-        <button onclick="resetCircles()">Сбросить</button>
+        <div class="circle A" id="circlA" onclick="circleLA()">
+            <div>1</div>
+        </div>
 
-        <script>
-            var container = document.getElementById('container');
-            var hiddenCircles = [];
+        <div class="circle B" id="circlB" onclick="circleLB()">
+            <div class="cic">2</div>
+        </div>
+
+        <div class="circle C" id="circlC" onclick="circleLC()">
+            <div>3</div>
+        </div>
+
+        <div class="circle D" id="circlD" onclick="circleLD()">
+            <div>4</div>
+        </div>
+
+        <div class="circle E" id="circlE" onclick="circleLE()">
+            <div>5</div>
+        </div>
+
+        <div class="circle F" id="circlF" onclick="circleLF()">
+            <div>6</div>
+        </div>
+
+        <div class="circle G" id="circlG" onclick="circleLG()">
+            <div>7</div>
+        </div>
+
+        <div class="circle H" id="circlH" onclick="circleLH()">
+            <div>8</div>
+        </div>
         
-            for (var i = 1; i <= 10; i++) {
-                var circle = document.createElement('div');
-                circle.className = 'circle';
-                circle.style.backgroundColor = getRandomColor();
-                circle.style.left = Math.random() * (window.innerWidth - 100) + 'px';
-                circle.style.top = Math.random() * (window.innerHeight - 100) + 'px';
-                circle.innerHTML = i;
-                circle.onclick = function() {
-                    hideCircle(this);
-                };
-                container.appendChild(circle);
-            }
-        
-            function getRandomColor() {
-                var letters = '0123456789ABCDEF';
-                var color = '#';
-                for (var i = 0; i < 6; i++) {
-                    color += letters[Math.floor(Math.random() * 16)];
-                }
-                return color;
-            }
-        
-            function hideCircle(circle) {
-                circle.style.opacity = '0'; // Изменяем прозрачность на 0
-                setTimeout(function() {
-                    circle.style.display = 'none'; // Скрываем круг после окончания анимации
-                }, 1000); // Время анимации в миллисекундах (1000 мс = 1 с)
-                hiddenCircles.push(circle);
-            }
-        
-            function resetCircles() {
-                hiddenCircles.forEach(function(circle) {
-                    circle.style.opacity = '1'; // Возвращаем прозрачность обратно к 1
-                    circle.style.display = 'inline-block';
-                });
-                hiddenCircles = [];
-            }
-        </script>
+        <div class="circle I" id="circlI" onclick="circleLI()">
+            <div>9</div>
+        </div>
+
+        <div class="circle J" id="circlJ" onclick="circleLJ()">
+            <div>10</div>
+        </div>
+
+        <input type="button" value="Вернуть круги " onclick="circleC()">
     </main>
 
     <footer>
