@@ -80,10 +80,37 @@
                     newBlock.style.backgroundColor = 'rgb(220, 20, 60)';
                     newBlock.style.height = '40px';
                     newBlock.style.marginTop = '10px';
-                    newBlock.style.border = '2px solid';
+                    newBlock.style.border = '5px solid rgb(219, 112, 147)';
                     newBlock.style.opacity = (i*10)+'%';
 
                     newBlock.innerText = (i+1);
+
+                    main.appendChild(newBlock);
+                }
+            }
+            function addcol() {
+                let main = document.querySelector('main');
+                let col = parseFloat(document.getElementById('col').value) || 0;
+                let counter = col; // Переменная для нумерации кругов
+                for(let i = col; i>0; i-=1) {
+                    let newBlock = document.createElement('div');
+                    newBlock.style.width = '40px';
+                    newBlock.style.height = '40px';
+                    newBlock.style.border = '1px solid';
+                    newBlock.style.margin = '20px';
+                    newBlock.style.borderRadius = '30px';
+                    newBlock.style.textAlign = 'center';
+                    newBlock.style.display = 'inline-block';
+                    newBlock.style.lineHeight = '40px'
+                    if (i%2==0) {
+                        newBlock.style.backgroundColor = "pink";
+                    }
+                    else{
+                        newBlock.style.backgroundColor = "blue";
+                    }
+
+                    newBlock.textContent = counter; // Добавление номера круга внутри круга
+                    counter--; // Уменьшение счетчика для обратной нумерации
 
                     main.appendChild(newBlock);
                 }
@@ -103,6 +130,8 @@
        <button onclick="add20_50()">20 => 50</button>
        <button onclick="add10_80()">10=>-80</button>
        <button onclick="add1_10()">Полупрозрачные блоки</button>
+       <button onclick="addcol()">Цветные круги</button>
+        <input type="number" id="col" placeholder="Введите число кругов">
     </main>
 
     <footer>
