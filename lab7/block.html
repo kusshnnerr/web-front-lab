@@ -20,7 +20,22 @@
 
             document.querySelector('main').appendChild(newBlock);
         }
-    </script>
+        function addNewBloks() {
+            let main = document.querySelector('main');
+            let blocksCount = parseFloat(document.getElementById('blocksCount').value) || 0;
+            for(let i=0; i<blocksCount; i++) {
+                let newBlock = document.createElement('div');
+                newBlock.style.backgroundColor = 'rgb(255, 0, 255)';
+                newBlock.style.height = '40px';
+                newBlock.style.marginTop = '10px';
+                newBlock.style.border = 'solid 5px rgb(238, 130, 238)';
+                newBlock.style.width = ((i*50)+175)+'px';
+                newBlock.innerHTML = `Блок № ${i+1}: 2*${i}<sup>2</sup> = ${2 * i ** 2}`;
+
+                main.appendChild(newBlock);
+            }
+        }
+    </script>  
 </head>
 <body>
 
@@ -30,6 +45,8 @@
 
     <main>
        <button onclick="addNewBlock()">Добавить блок</button>
+       <button onclick="addNewBloks()">Добавить блоки</button>
+       <input type="number" id="blocksCount" placeholder="Введите число блоков">
     </main>
 
     <footer>
