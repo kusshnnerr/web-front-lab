@@ -91,7 +91,7 @@
             function addcol() {
                 let main = document.querySelector('main');
                 let col = parseFloat(document.getElementById('col').value) || 0;
-                let counter = col; // Переменная для нумерации кругов
+                let counter = col; 
                 for(let i = col; i>0; i-=1) {
                     let newBlock = document.createElement('div');
                     newBlock.style.width = '40px';
@@ -109,8 +109,8 @@
                         newBlock.style.backgroundColor = "blue";
                     }
 
-                    newBlock.textContent = counter; // Добавление номера круга внутри круга
-                    counter--; // Уменьшение счетчика для обратной нумерации
+                    newBlock.textContent = counter; 
+                    counter--; 
 
                     main.appendChild(newBlock);
                 }
