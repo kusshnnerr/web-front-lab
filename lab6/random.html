@@ -60,7 +60,7 @@
         }
         function guess() {
             let input = document.getElementById('user-number');
-            let userNumber = input.value.trim(); // Удаляем начальные и конечные пробелы
+            let userNumber = input.value.trim(); 
             let message = document.getElementById('result');
             if (userNumber === '' || isNaN(userNumber)) {
             message.innerHTML = 'Пожалуйста, введите число!';
@@ -86,7 +86,7 @@
                 document.getElementById('try-count').innerHTML = count;
             }
         }
-        function again(params) {
+        function again() {
             let screens = document.getElementsByClassName('game');
             screens[2].style.display = 'none';
             screens[1].style.display = 'block';
