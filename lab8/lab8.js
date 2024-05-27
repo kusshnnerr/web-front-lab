@@ -15,4 +15,19 @@ function showDate () {
 
     let inDate = document.getElementById('in-date');
     inDate.innerHTML = 'Дата и время для локали Индии: ' + currentDate.toLocaleString('hi-IN');
+
+    let currentYear = document.getElementById('current-year');
+  currentYear.innerHTML = 'Текущий год: ' + currentDate.getFullYear();
+
+  
+  let currentMonth = document.getElementById('current-month');
+  currentMonth.innerHTML = 'Текущий месяц: ' + (currentDate.getMonth() + 1);
+
+  let currentDay = document.getElementById('current-day');
+  currentDay.innerHTML = 'Текущая дата: ' + currentDate.getDate();
+
+  let weekdays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+  let currentWeekday = document.getElementById('current-weekday');
+  currentWeekday.innerHTML = 'День недели: ' + weekdays[currentDate.getDay()];
+
 }
