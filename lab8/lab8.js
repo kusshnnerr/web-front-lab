@@ -17,17 +17,28 @@ function showDate () {
     inDate.innerHTML = 'Дата и время для локали Индии: ' + currentDate.toLocaleString('hi-IN');
 
     let currentYear = document.getElementById('current-year');
-  currentYear.innerHTML = 'Текущий год: ' + currentDate.getFullYear();
+    currentYear.innerHTML = 'Текущий год: ' + currentDate.getFullYear();
 
   
-  let currentMonth = document.getElementById('current-month');
-  currentMonth.innerHTML = 'Текущий месяц: ' + (currentDate.getMonth() + 1);
+    let currentMonth = document.getElementById('current-month');
+    currentMonth.innerHTML = 'Текущий месяц: ' + (currentDate.getMonth() + 1);
 
-  let currentDay = document.getElementById('current-day');
-  currentDay.innerHTML = 'Текущая дата: ' + currentDate.getDate();
+    let currentDay = document.getElementById('current-day');
+    currentDay.innerHTML = 'Текущая дата: ' + currentDate.getDate();
 
-  let weekdays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-  let currentWeekday = document.getElementById('current-weekday');
-  currentWeekday.innerHTML = 'День недели: ' + weekdays[currentDate.getDay()];
-
+    let weekdays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    let currentWeekday = document.getElementById('current-weekday');
+    currentWeekday.innerHTML = 'День недели: ' + weekdays[currentDate.getDay()];
 }
+function showWeekday() {
+    let day = document.getElementById("day").value;
+    let month = document.getElementById("month").value;
+    let year = document.getElementById("year").value;
+
+    let date = new Date(year, month - 1, day);
+    let weekdays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    let weekday = weekdays[date.getDay()];
+
+    let result = document.getElementById("weekday-result");
+    result.innerHTML = `Для даты ${day}.${month}.${year} день недели - ${weekday}`;
+  }
