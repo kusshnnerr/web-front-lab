@@ -39,6 +39,5 @@ function showWeekday() {
     let weekdays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
     let weekday = weekdays[date.getDay()];
 
-    let result = document.getElementById("weekday-result");
-    result.innerHTML = `Для даты ${day}.${month}.${year} день недели - ${weekday}`;
+    let result = document.getElementById("weekday-result");result.innerHTML = `Для даты ${day}.${month}.${year} день недели - ${weekday}`;
   }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кушнер Екатерина Константиновна. Лабораторная 8</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <script src="get-days-count.js"></script>  
+    <style>
+        div {
+                background-color: white;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            input[type=date] {
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+            button {
+                background-color: #4ca0af;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            button.clear-btn {
+                background-color: #ffa099;
+            }
+            #date {
+                margin-top: 20px;
+                font-size: 18px;
+                font-weight: bold;
+    }
+    </style> 
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 8
+    </header>
+
+    <main>
+        <div>
+            <label>Дата рождения:<input type="date"></label>
+        </div>
+
+        <div>
+            <button onclick="showDaysCount()">Показать число дней</button><button class="clear-btn" onclick="clearForm()">Очистить</button>
+        </div>
+
+        <div id="date"></div>
+
+        
+    </main>
+
+    <footer>
+        &copy;Екатерина Кушнер, ФБИ-21, 2 курс, 2024
+    </footer>   
+</body>
+</html>
