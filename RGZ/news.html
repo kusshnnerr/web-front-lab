@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости МС Банк Рус</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png">
+    <link rel="icon" href="favicon-32x32.png">
+    <style>
+        header {
+            background-color: #ffffff;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 147px;
+            margin-right: 165px;
+        }
+        header img {
+            height: 40px;
+        }
+        header a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 80%; 
+            margin: 0 auto;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            margin: 5px;
+            width: 270px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            overflow: hidden;
+            margin-bottom: 50px;
+            height: 330px;
+            position: relative;
+            cursor: pointer;
+        }
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        .card h2 {
+            margin: 15px;
+            font-size: 13px;
+            font-family: 'Trebuchet MS';
+        }
+        .card p {
+            margin: 10px;
+            font-size: 14px;
+            color: #666;
+            font-family: 'Trebuchet MS';
+        }
+        .card a {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            border: none;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 10px;
+            position: absolute; 
+            bottom: 0; 
+            text-align: left;
+            font-family: 'Trebuchet MS';
+            font-size: 12px;
+        }
+        .date {
+            position: absolute;
+            bottom: 25px;
+            font-family: 'Trebuchet MS';
+        }
+        h1 {
+            position: relative;
+            margin-left: 165px;
+            font-family: 'Trebuchet MS';
+        }
+        h4 {
+            margin-left: 165px;
+            font-family: 'Trebuchet MS';
+            color: #666;
+        }
+        .card-image {
+            transition: transform 0.3s ease;
+        }
+        .card-image:hover {
+            transform: scale(1.1); 
+        }  
+        .more-link {
+            text-decoration: none; 
+        }
+        footer {
+            border-top: 1px solid #ccc; 
+            padding-top: 5px;
+            position: relative;
+            bottom: 0;
+        }
+        .menu-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 150px;
+            background-color: rgba(51, 51, 51, 0.271);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .menu-container nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-container nav ul li {
+            background-color: rgba(183, 25, 25, 0.545);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-container nav ul li:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .menu-container nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-style:oblique;
+            font-weight: bold;
+        }
+
+        .menu-container nav ul li a:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <a href="company.html"> 
+            <img src="ff.jpg" alt="МС Банк Рус"> 
+        </a> 
+    </header>
+    
+    <main>
+        <h1>Новости МС Банк Рус</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="1.1.jpg" alt="Новость 1" class="card-image">
+                <h2>О МЕРАХ ПОДДЕРЖКИ ПОСТРАДАВШИХ В «КРОКУС СИТИ ХОЛЛ»</h2>    
+                <p class="date">Дата: 2023.04.01</p>
+                <a href="news1.html" class="more-link">ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="2.1.jpg" alt="Новость 2" class="card-image">
+                <h2>ОПРОС БАНКА РОССИИ О БЕЗОПАСНОСТИ ФИНАНСОВЫХ УСЛУГ 2023 Г.»</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a href="news2.html" class="more-link">ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="3.jpg" alt="Новость 2" class="card-image">
+                <h2 >SOFTLINE ПРОВЕЛА ИНТЕГРАЦИЮ ISOC В МС БАНК РУС</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a href="news3.html" class="more-link">ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="4.jpg" alt="Новость 2" class="card-image">
+                <h2 >МС БАНК РУС ПЕРЕШЕЛ НА КАДРОВЫЙ ЭЛЕКТРОННЫЙ ДОКУМЕНТООБОРОТ ОТ КОМПАНИИ «ТЕНЗОР»</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a href="news4.html" class="more-link">ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="1.1.jpg" alt="Новость 1" class="card-image">
+                <h2 >ПЛАТЕЖНАЯ СИСТЕМА «ЗОЛОТАЯ КОРОНА» - ПОГАШЕНИЕ КРЕДИТА БЕЗ КОМИССИИ</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a>ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="6.jpg" alt="Новость 2" class="card-image">
+                <h2 >МС БАНК РУС ВНЕДРИЛ ОТКРЫТИЕ БАНКОВСКОГО СЧЕТА ПРИ ПОМОЩИ БИОМЕТРИИ</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a>ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="1.1.jpg" alt="Новость 1" class="card-image">
+                <h2 >МС БАНК РУС ПРОВЕЛ АККРЕДИТАЦИЮ СТРАХОВЫХ КОМПАНИЙ</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a>ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="8.jpg" alt="Новость 2" class="card-image">
+                <h2 >МС БАНК РУС ВОЗОБНОВИЛ КРЕДИТОВАНИЕ АВТОМОБИЛЕЙ С ПРОБЕГОМ</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a>ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="9.jpg" alt="Новость 2" class="card-image">
+                <h2 >МС БАНК РУС НАЧИНАЕТ СОТРУДНИЧЕСТВО С БЛАГОТВОРИТЕЛЬНЫМ ФОНДОМ «ЧИСТОЕ НЕБО»</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a>ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="10.jpg" alt="Новость 2" class="card-image">
+                <h2 >РОЛЬФ И МС БАНК РУС НАЛАДИЛИ ОБМЕН ДАННЫМИ ЧЕРЕЗ МУЛЬТИБАНКОВСКУЮ ПЛАТФОРМУ НРД</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a>ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="11.jpg" alt="Новость 2" class="card-image">
+                <h2 >МС БАНК РУС АВТОМАТИЗИРОВАЛ ВЗАИМОДЕЙСТВИЕ C ПЛАТФОРМОЙ «ЗНАЙ СВОЕГО КЛИЕНТА» БАНКА РОССИИ ПРИ ПОДДЕРЖКЕ «ДИАСОФТ»</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a>ПОДРОБНЕЕ →</a>
+            </div>
+            <div class="card">
+                <img src="12.jpg" alt="Новость 2" class="card-image">
+                <h2 >МС БАНК РУС СНИЗИЛ СТАВКУ ДО 9,9% ГОДОВЫХ</h2> 
+                <p class="date">Дата: 2023.04.02</p>
+                <a>ПОДРОБНЕЕ →</a>
+            </div>
+        </div>
+        <div class="menu-container">
+            <nav>
+                <ul>
+                    <li><a href="company.html">О компании</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="curs.html">Курс валют</a></li>
+                    <li><a href="contact.html">Контактные данные</a></li>
+                    <li><a href="video.html">Видео</a></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+    <footer>
+        <h4>MC Bank Rus<br>
+        © 2014–2024, АО МС Банк Рус, официальный сайт, лицензия ЦБ РФ №2789 от 14.11.2014г</h4>
+    </footer>
+</body>
+</html>

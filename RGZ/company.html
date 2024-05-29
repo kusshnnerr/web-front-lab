@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC BANK RUS</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png">
+    <link rel="icon" href="favicon-32x32.png">
+    <style>
+        footer { 
+        padding-top: 500px;  
+    }
+    h4 { 
+        margin-left: 165px; 
+        font-family: 'Trebuchet MS'; 
+        color: #666;
+    }
+        header { 
+            background-color: #ffffff; 
+            color: white; 
+            padding: 10px 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-left: 165px; 
+            margin-right: 165px; 
+        } 
+        header img { 
+            height: 40px; 
+        } 
+        header a { 
+            color: rgb(0, 0, 0); 
+            text-decoration: none; 
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        .header-strip {
+            height: 10px;
+            background-color: #33333379;
+        }
+        .image-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: -20px auto 0; /* Отрицательный верхний отступ */
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px; /* Добавляем отступ между изображениями */
+        }
+        .image-container img:not(:first-child) {
+            margin-top: 40px; /* Увеличиваем отступ для всех изображений, кроме первого */
+        }
+        .image-container img:first-child {
+            width: 1450px;
+            height: 500px;
+            display: block;
+            right: 110px; /* Уберите все отступы слева */
+            position: relative; /* Установите позиционирование относительно его обычного положения */
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 660px;
+            left: 150px;
+            text-align: left;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            width: 505px;
+        }
+
+        .text-overlay h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .text-overlay p {
+            font-size: 18px;
+            text-align: left;
+
+        }
+        .text-2 {
+            position: absolute;
+            top: 1600px;
+            left: 125px;
+            text-align:justify;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            background-color: rgba(16, 7, 7, 0.589);
+            border-radius: 15px;
+            width: 1000px;
+            height: 350px;
+            font-size: 25px;
+            line-height: 1.5;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        .menu-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 150px;
+            background-color: rgba(51, 51, 51, 0.271);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .menu-container nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-container nav ul li {
+            background-color: rgba(183, 25, 25, 0.545);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-container nav ul li:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .menu-container nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-style: oblique;
+            font-weight: bold;
+        }
+
+        .menu-container nav ul li a:hover {
+            color: #ccc;
+        }
+        .pod {
+            display: block;
+            background-color: rgb(242, 242, 242);
+            border: 2px;
+            border-radius: 10px;
+            position: absolute;
+            left: 850px;
+            top: 1100px;
+            font-style: italic;
+            font-size: larger;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header> 
+        <a href="company.html"> 
+            <img src="ff.jpg" alt="МС Банк Рус"> 
+        </a> 
+    </header>
+    
+
+    <main>
+        <div class="image-container">
+            <img src="1.jpg" alt="Image 1">
+            <img src="2.jpg" alt="Image 2">
+            <img src="pred.png" alt="Image 3" style='width: 800px;'>
+            <div class="text-overlay">
+                <h2>О БАНКЕ</h2>
+                <p>«МС Банк Рус разделяет философию Mitsubishi Corporation,
+                    реализуя ее через качественный менеджмент, открытость рынку и следование потребностям клиентов.
+                    Мы — Банк полного цикла. У нас есть собственные кассы для физических лиц,
+                    мы предоставляем корпоративное кредитование, являемся участником Системы быстрых платежей».</p>
+                <p>Кендзи Одака, член Совета Директоров МС Банк Рус</p>
+            </div>
+            <div class="text-2"> 
+                <h1>История банка</h1> 
+                <p>
+                    АО МС Банк Рус был учрежден в 1994 году (лицензия на осуществление банковских операций № 2789 от 14.11.2014г).
+                    Изначально миссия Банка заключалась в финансировании юридических лиц, кредитовании предприятий автомобильного
+                    бизнеса, операциях с наличной иностранной валютой. С апреля 2014 года Банк начал деятельность по кредитованию
+                    физических лиц на покупку автомобилей Mitsubishi, а с января 2016 года — на покупку автомобилей с пробегом.
+                </p> 
+            </div>
+        </div>
+        <div class="pod">
+            <p>Председатель Правления АО «МС Банк Рус».<br>
+                Саваии Норихиро
+            </p>
+        </div>
+        <div class="menu-container">
+            <nav>
+                <ul>
+                    <li><a href="company.html">О компании</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="curs.html">Курс валют</a></li>
+                    <li><a href="contact.html">Контактные данные</a></li>
+                    <li><a href="video.html">Видео</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </main>
+
+    <footer> 
+        <h4>MC Bank Rus<br> 
+        © 2014–2024, АО МС Банк Рус, официальный сайт, лицензия ЦБ РФ №2789 от 14.11.2014г</h4> 
+    </footer>
+</body>
+</html>
+
+

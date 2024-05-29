@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современный Валютный Калькулятор</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png">
+    <link rel="icon" href="favicon-32x32.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .calculator {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+        }
+
+        .calculator h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .calculator input,
+        .calculator select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .calculator button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .calculator button:hover {
+            background-color: #45a049;
+        }
+
+        .calculator #resCurr {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .menu-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: rgba(51, 51, 51, 0.271);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .menu-container nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-container nav ul li {
+            background-color: rgba(183, 25, 25, 0.545);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-container nav ul li:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .menu-container nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-style: oblique;
+            font-weight: bold;
+        }
+
+        .menu-container nav ul li a:hover {
+            color: #ccc;
+        }
+    </style>
+
+    <script>
+        function convertation() {
+            const url = 'https://www.cbr-xml-daily.ru/daily_json.js';
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const tjs = data.Valute.UZS;
+                    const cur = tjs.Value;
+                    const nominal = tjs.Nominal;
+                    console.log(data.Valute.UZS);
+
+                    let summ = Number(currCount.value);
+                    let fir_curr = String(selectFirCurrency.value);
+                    let sec_curr = selectSecCurrency.value;
+                    let result;
+                    let curs = fir_curr + sec_curr;
+                    console.log(curs);
+
+                    switch (curs) {
+                        case 'RUBUZS':
+                            result = ((summ / cur) * nominal).toFixed(2);
+                            break;
+                        case 'UZSRUB':
+                            result = ((summ * cur) / nominal).toFixed(2);
+                            break;
+                        case 'RUBRUB':
+                        case 'UZSUZS':
+                            result = summ.toFixed(2);
+                            break;
+                        default:
+                            result = 'Incorrect input';
+                    }
+                    resCurr.innerHTML = result;
+                })
+                .catch(error => {
+                    console.error('Ошибка запроса:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <header> 
+    </header>
+    <main>
+        <div class="calculator">
+            <h2>Современный Валютный Калькулятор</h2>
+            <p>Что конвертируем
+                <select id="selectFirCurrency">
+                    <option value="RUB">RUB</option>
+                    <option value="UZS">UZS</option>
+                </select>
+            </p>
+             Конвертируемая сумма
+             <input type="text" id="currCount">
+             <p>
+                Во что конвертируем
+                <select id="selectSecCurrency">
+                    <option value="RUB">RUB</option>
+                    <option value="UZS">UZS</option>
+                </select>
+            </p>
+            <button onclick="convertation()">Конвертировать</button>
+            <div id="resCurr"></div>
+        </div>
+    <div class="menu-container">
+        <nav>
+            <ul>
+                <li><a href="company.html">О компании</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="curs.html">Курс валют</a></li>
+                <li><a href="contact.html">Контактные данные</a></li>
+                <li><a href="video.html">Видео</a></li>
+            </ul>
+        </nav>
+    </div>
+    </main>
+    <footer> 
+    </footer>
+</body>
+</html>
